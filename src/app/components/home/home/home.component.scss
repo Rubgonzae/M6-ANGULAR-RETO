@@ -1,0 +1,25 @@
+
+
+main {
+  background-color: #f3f3f5;
+  display: flex;
+  padding: 0;
+}
+
+aside {
+  background-color: #2b3035;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contenido{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.principal{
+  padding-top: 1rem;
+  width: 80%;
+  margin: auto;
+}

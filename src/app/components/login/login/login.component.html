@@ -1,0 +1,23 @@
+<section>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Usuario</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="uasuario@correo.dominio" formControlName="email">
+      <div id="emailHelp" class="form-text">Nunca compartiremos sus datos personales.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Minimo 6 caracteres"
+        formControlName="password">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Guardar</label>
+    </div>
+    <button type="submit" class="btn btn-warning">Login</button>
+  </form>
+  <div>
+    <img src="assets\sddefault.jpg" alt="">
+  </div>
+</section>
