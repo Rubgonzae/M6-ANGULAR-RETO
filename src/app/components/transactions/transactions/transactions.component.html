@@ -1,11 +1,16 @@
 <section>
   <div>
+
+  </div>
+  <div>
     <h1>Sucursal Virtual Personas</h1>
     <p>La seguridad es un compromiso de todos, recuerde cambiar constantemente su contraseña</p>
   </div>
-  <div>
+  <form action="" [formGroup]="trxForm" (ngSubmit)="onSubmit()">
+  <div class="body">
     <div class="form-floating">
-      <select class="form-select" id="floatingSelect" aria-label="Floating label select example" (change)="onSelect($event)">
+      <select class="form-select" id="floatingSelect" aria-label="Floating label select example" (change)="onSelect($event)"
+      formControlName="transaction">
         <option selected>Seleccione la transaccion a realizar</option>
         <option value="1">Deposito desde sucursal</option>
         <option value="2">Deposito desde cajero</option>
@@ -16,8 +21,16 @@
       </select>
       <label for="floatingSelect">Works with selects</label>
     </div>
+    <div >
+      <div class="monto">
+        <label for="Monto" class="form-label">Monto: </label>
+        <input type="number" class="form-control" id="monto" placeholder="0.00" formControlName="amount">
+        <button type="submit" class="btn btn-warning">Enviar</button>
+      </div>
+
+    </div>
   </div>
-  <div>
-    <img src="assets/0zwaafghdlg01.webp" class="img-thumbnail" alt="Tarjeta de Harriet Tubman" />
-  </div>
+  <img src="assets/0zwaafghdlg01.webp" class="img-thumbnail" alt="Tarjeta de Harriet Tubman" />
+</form>
+
 </section>

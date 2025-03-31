@@ -22,6 +22,7 @@ export class bankGuardGuard implements CanActivate {
 
       return true;
     } else {
+      alert('No tienes permisos para acceder a esta sección');
       this.router.navigate(['login']);
       return true;
     }

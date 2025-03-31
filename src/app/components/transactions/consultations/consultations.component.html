@@ -1,1 +1,30 @@
-<p>consultations works!</p>
+<section class="content">
+<h1>CONSULTAS</h1>
+<div>
+  <h3>Saldo de la cuenta: {{saldo | currency}} </h3>
+  <hr>
+</div>
+<div>
+  <h2>Historial de transacciones</h2>
+</div>
+<div>
+  <table class="table table-striped table-warning">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tipo de transacción</th>
+        <th>Monto</th>
+        <th>Fecha y Hora</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaccion of transacciones">
+        <td>{{ transaccion.id }}</td>
+        <td>{{ transaccion.tipo }}</td>
+        <td>{{ transaccion.monto | currency }}</td>
+        <td>{{ transaccion.fecha | date: 'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>
